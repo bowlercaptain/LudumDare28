@@ -189,6 +189,8 @@ MonoBehaviour:
   axes: 1
   sensitivityX: 15
   sensitivityY: 0
+  joystickSensitivityX: 2
+  joystickSensitivityY: 2
   minimumX: -360
   maximumX: 360
   minimumY: 0
@@ -387,6 +389,8 @@ MonoBehaviour:
   axes: 2
   sensitivityX: 10
   sensitivityY: 10
+  joystickSensitivityX: 83.4300003
+  joystickSensitivityY: 50.0299988
   minimumX: 0
   maximumX: 360
   minimumY: -90
@@ -714,6 +718,14 @@ Prefab:
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: joystickSensitivityX
+      value: 83.4300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: joystickSensitivityY
+      value: 50.0299988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}

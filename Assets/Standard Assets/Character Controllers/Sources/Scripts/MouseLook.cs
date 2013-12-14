@@ -21,6 +21,8 @@ public class MouseLook : MonoBehaviour {
 	public RotationAxes axes = RotationAxes.MouseXAndY;
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
+	public float joystickSensitivityX = 2F;
+	public float joystickSensitivityY = 2F;
 
 	public float minimumX = -360F;
 	public float maximumX = 360F;
@@ -34,9 +36,10 @@ public class MouseLook : MonoBehaviour {
 	{
 		if (axes == RotationAxes.MouseXAndY)
 		{
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX + Input.GetAxis("Joystick R X") * joystickSensitivityX;
+			Debug.Log (""+Input.GetAxis ("Joystick R X"));//I will remember how to do controller-based FPS controls after sleeping.
 			
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			rotationY += Input.GetAxis("Mouse Y") * sensitivityY + Input.GetAxis ("Joystick R Y") * joystickSensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
 			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
