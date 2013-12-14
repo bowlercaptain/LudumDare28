@@ -467,6 +467,7 @@ MonoBehaviour:
   watch: {fileID: 1772042432}
   useDistance: 5.03999996
   currentMessage: 
+  swingTime: 0
 --- !u!1 &574943853
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdfa668460fea94aae7dbb00e5b85fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainController: {fileID: 1719446682}
 --- !u!23 &1305044722
 Renderer:
   m_ObjectHideFlags: 0
