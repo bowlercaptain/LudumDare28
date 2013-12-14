@@ -8,15 +8,22 @@ var rose:Transform;
 var watch:Transform;
 var useDistance:float;
 var currentMessage:String;//monodevelop, stop changing my capitalization. you don't know about "transform", either.
+var swingTime:float;
 
 function Start () {
 	currentMessage="OnKnife";
 	held=knife;
+	swingTime=0;
 }
 
 function Update () {
+	if(swingTime){
+	swingTime-=Time.deltaTime;
+	if(swingTime<0){swingTime=0;}
+	}
 	//use held item
 	if(Input.GetButtonDown("Fire1")){
+		swingTime=.125;
 		var nowUseDistance:float = useDistance;
 		if (currentMessage=="OnGun"){
 			nowUseDistance = Mathf.Infinity;
@@ -49,7 +56,7 @@ function Update () {
 }
 
 function LateUpdate () {//lateUpdate to prevent strange-looking movement
-	held.position=transform.position+transform.rotation*holdPosition;
+	held.position=transform.position+transform.rotation*holdPosition+.25*(transform.forward*(1-Mathf.Cos(16*Mathf.PI*swingTime))-.5*transform.up*Mathf.Sin(16*Mathf.PI*swingTime));
 	held.rotation=transform.rotation;
 	//when user uses item, perform "swing" animation, a la minecraft or every other first person game.
 }

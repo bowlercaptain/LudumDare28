@@ -1,9 +1,11 @@
 ﻿#pragma strict
 var clock:float;
 var gameOver:boolean;
+var swingTime:float;
 
 function Start () {
 	clock=0;
+	swingTime=0;
 }
 
 function Update () {
@@ -11,9 +13,6 @@ function Update () {
 	if(clock>60){GameOver();}
 	else if(Input.GetKeyDown("escape")||(gameOver&&(clock>3||Input.GetButtonDown("Fire1")||Input.GetButtonDown("Start")))){//"3" was selected arbitrarily. adjust to sanity.
 		Application.LoadLevel("main menu");
-	}
-	if (Input.GetKeyDown("escape")){
-	
 	}
 }
 
