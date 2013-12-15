@@ -672,7 +672,7 @@ public override void Recycle () {
 			} catch (System.Exception e) {
 				ForceLogError ("Exception in path "+pathID+"\n"+e.ToString());
 			}
-		}
+		}   
 		
 		public abstract void Prepare ();
 		

@@ -30,24 +30,26 @@ public class ShootyShooty : MonoBehaviour
 	void Update () 
 	{
 		Debug.DrawLine(transform.position, transform.position + transform.forward, Color.red);
-		if (Time.time > fireTimer)
-		{
-			GameObject projectile;
-			Vector3 muzzlevelocity = transform.forward;
-			
-			if (Inaccuracy != 0)
+		if(Input.GetButtonDown("Fire1")){
+			if (Time.time > fireTimer)
 			{
-				Vector2 rand = Random.insideUnitCircle;
-				muzzlevelocity += new Vector3(rand.x, rand.y, 0) * Inaccuracy;
+				GameObject projectile;
+				Vector3 muzzlevelocity = transform.forward;
+				
+				if (Inaccuracy != 0)
+				{
+					Vector2 rand = Random.insideUnitCircle;
+					muzzlevelocity += new Vector3(rand.x, rand.y, 0) * Inaccuracy;
+				}
+				
+				muzzlevelocity = muzzlevelocity.normalized * projMuzzleVelocity;
+				
+				projectile = Instantiate(projPrefab, transform.position, transform.rotation) as GameObject;
+				projectile.GetComponent<BangBang>().muzzleVelocity = muzzlevelocity;
+				fireTimer = Time.time + RateOfFire;
 			}
-			
-			muzzlevelocity = muzzlevelocity.normalized * projMuzzleVelocity;
-			
-			projectile = Instantiate(projPrefab, transform.position, transform.rotation) as GameObject;
-			projectile.GetComponent<BangBang>().muzzleVelocity = muzzlevelocity;
-			fireTimer = Time.time + RateOfFire;
+			else
+				return;
 		}
-		else
-			return;
 	}
 }
