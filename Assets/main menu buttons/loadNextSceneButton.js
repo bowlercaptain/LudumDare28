@@ -5,7 +5,7 @@ function Start () {
 }
 
 function Update () {
-	if(Input.GetKeyDown("enter")||Input.GetKeyDown("return")){
+	if(Input.GetButtonDown("Start")){//Input.GetKeyDown("enter")||Input.GetKeyDown("return")){
 		Application.LoadLevel("game scene");
 	}
 }
