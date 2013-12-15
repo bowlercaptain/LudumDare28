@@ -4,7 +4,7 @@
 *.pidb
 *.unityproj
 .DS_Store
-/Library/
+/Library/*s
 /Library
 /bin
 /obj
