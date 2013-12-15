@@ -16,8 +16,9 @@ function OnGun () {
 }
 
 function OnKnife () {
-	mainController.buddy=1;
-	gameObject.SendMessage("SetNewSpeed",0);
+	OnGun ();
+	//mainController.buddy=1;
+	//gameObject.SendMessage("SetNewSpeed",0);
 }
 
 function OnRose () {

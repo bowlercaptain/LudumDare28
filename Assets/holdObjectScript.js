@@ -59,13 +59,15 @@ function Update () {
 
 function LateUpdate () {//lateUpdate to prevent strange-looking movement
 	held.getTransform.position=transform.position+transform.rotation*holdPosition;
-	if(held==knife){held.getTransform.position+=.25*(transform.forward*(1-Mathf.Cos(16*Mathf.PI*swingTime))-.5*transform.up*Mathf.Sin(16*Mathf.PI*swingTime));}
 	held.getTransform.rotation=transform.rotation;//transform.rotation*
 	held.getTransform.localRotation*=Quaternion.Euler(Vector3.up*90);
 	if(held==gun||held==watch){
 		held.getTransform.localRotation*=Quaternion.Euler(Vector3.up*90);
 	}
-	if (held==gun){held.getTransform.localRotation*=Quaternion.Euler(Vector3.right*90*Mathf.Sin(Mathf.PI*8*swingTime));}
+	if(held == knife) {held.getTransform.position+=.25*(transform.forward*(1-Mathf.Cos(16*Mathf.PI*swingTime))-.5*transform.up*Mathf.Sin(16*Mathf.PI*swingTime));}
+	if(held == gun) {held.getTransform.localRotation*=Quaternion.Euler(Vector3.right*90*Mathf.Sin(Mathf.PI*8*swingTime));}
+	if(held == watch) {held.getTransform.position+=.05*(transform.up*Mathf.Sin(8*Mathf.PI*swingTime));}
+	if(held == rose) {held.getTransform.localRotation*=Quaternion.Euler(Vector3.up*90*16*swingTime);}
 	//held.rotation.
 	//when user uses item, perform "swing" animation, a la minecraft or every other first person game.
 }
