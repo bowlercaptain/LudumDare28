@@ -6,6 +6,9 @@
 .DS_Store
 /Library/**
 /Library
+Library
+Library/*
+Library/**
 /bin
 /obj
 /Temp
