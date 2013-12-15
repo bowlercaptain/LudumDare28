@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+var mainController:mainControllerScript;
+
 function Start () {
 
 }
@@ -20,6 +22,7 @@ function OnGun () {
 //shatter.
 
 //create some shards of glass, play shattering noise
+mainController.window=true;
 
 Destroy(gameObject);
 }

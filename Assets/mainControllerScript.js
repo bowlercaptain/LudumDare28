@@ -1,8 +1,18 @@
 ﻿#pragma strict
 var clock:float;
 var gameOver:boolean;
+var style:GUIStyle;
+var girl:int;
+var buddy:int;
+var bomb:int;
+var window:boolean;
+var gameOverString:String;
 
 function Start () {
+	girl=0;
+	bomb=0;
+	buddy=0;
+	window=false;
 	clock=0;
 	Screen.showCursor = false;
 }
@@ -26,8 +36,8 @@ function GameOver () {//can be called by, say, the bomb exploding, as well as th
 }
 
 function OnGUI(){
-	GUI.Label(Rect(20,10,100,100),""+clock);
+	//GUI.Label(Rect(20,10,100,100),""+clock);
 	if(gameOver){
-		GUI.Label(Rect(10,10,100,100),"Game over.");//make this bigger, centered, and an image.
+		GUI.Label(Rect(10,10,100,100),gameOverString,style);
 	}
 }

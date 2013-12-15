@@ -45,9 +45,10 @@ function Update () {
 		} else if (held==rose){
 			held=gun;
 			currentMessage="OnGun";
-		} else if (held==gun){
-			held=watch;
-			currentMessage="OnWatch";
+		//} else if (held==gun){
+		//	held=watch;
+		//	currentMessage="OnWatch"; 
+		//Screw the watch.
 		} else {//don't check the status of currently held item - if we destroy a tool for some reason, this will equip the knife by default.
 			held=knife;
 			currentMessage="OnKnife";

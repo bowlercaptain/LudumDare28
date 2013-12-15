@@ -336,6 +336,10 @@ public class AIPath : MonoBehaviour {
 			transform.Translate (dir*Time.deltaTime, Space.World);
 		}
 	}
+
+	public void SetNewSpeed (float newSpeed){//so javascript can sendMessage to a c# script
+		speed=newSpeed;
+	}
 	
 	/** Point to where the AI is heading.
 	  * Filled in by #CalculateVelocity */

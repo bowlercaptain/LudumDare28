@@ -16,7 +16,7 @@ function Update () {
 
 function OnKnife () {
 //get disarmed
-transform.position+=transform.up;
+mainController.bomb=1;
 }
 
 function OnRose () {
@@ -27,6 +27,7 @@ function OnGun () {
 // explode. idiot.
 
 //Explosion animation! turn on a particle emitter of some kind?
+mainController.bomb=3;
 mainController.GameOver();
 }
 
