@@ -23,7 +23,9 @@ function Update () {
 	}
 	//use held item
 	if(Input.GetButtonDown("Fire1")){
+		//iF(held==knife){
 		swingTime=.125;
+		//}
 		var nowUseDistance:float = useDistance;
 		if (currentMessage=="OnGun"){
 			nowUseDistance = Mathf.Infinity;
@@ -56,12 +58,14 @@ function Update () {
 }
 
 function LateUpdate () {//lateUpdate to prevent strange-looking movement
-	held.getTransform.position=transform.position+transform.rotation*holdPosition+.25*(transform.forward*(1-Mathf.Cos(16*Mathf.PI*swingTime))-.5*transform.up*Mathf.Sin(16*Mathf.PI*swingTime));
+	held.getTransform.position=transform.position+transform.rotation*holdPosition;
+	if(held==knife){held.getTransform.position+=.25*(transform.forward*(1-Mathf.Cos(16*Mathf.PI*swingTime))-.5*transform.up*Mathf.Sin(16*Mathf.PI*swingTime));}
 	held.getTransform.rotation=transform.rotation;//transform.rotation*
 	held.getTransform.localRotation*=Quaternion.Euler(Vector3.up*90);
 	if(held==gun||held==watch){
 		held.getTransform.localRotation*=Quaternion.Euler(Vector3.up*90);
 	}
+	if (held==gun){held.getTransform.localRotation*=Quaternion.Euler(Vector3.right*90*Mathf.Sin(Mathf.PI*8*swingTime));}
 	//held.rotation.
 	//when user uses item, perform "swing" animation, a la minecraft or every other first person game.
 }

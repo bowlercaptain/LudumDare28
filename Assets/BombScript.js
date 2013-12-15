@@ -36,6 +36,6 @@ function OnGun () {
 
 //Explosion animation! turn on a particle emitter of some kind?
 mainController.bomb=2;
-particleSystem.enableEmission=true;
+particleSystem.Play();
 mainController.GameOver();
 }
