@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: mainController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .567538857, y: -.299645662, z: .602416039}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad8d5459951d724ea1fece25ddbbacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clock: 0
+  gameOver: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astarData:
+    hasBeenReverted: 0
+    data: 504b0304140000080800f80b8f4309833cda03020000e30300000b0024006772617068302e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce015d535d8fda3010fc2b959f43444c0881b72bf468a56bef74b4ea43d507936c88856347fee8c19df8ef5d9b1008428ac2ececceecd8f9203bc74bb2f820ff9870401684ceaa7996a60cf2f124a1743eca58b6a5e5b6c88b7196e6931939458499160afbca2c57649144442bebdfa51f74208b71448ee1f98e4fa417202de8ae98c639a5e9641e38a3249ed23ca5b38406f624ce526c70b210ac69a1dcf077e8fae6d3d0912453244855c2b986ea8512829b4ede1e5bbfc692b5c609201129396b20c823b506beab2d59d09baee7aa3260835fcd8e2bae71b5308c7c56b6c6090d33fb9b88fc46e739df87855182954aabe66ba7928c71a6ad79b17f65c78219842a260c0cc1d5ad41d70e324cae195eec2e6b2850d56a07171f03c8c93726f66c2be0770df2875a6be564d9570dd05567e3e4573b2c056fb6a811a7d7bf0f076e8238021ba17ca27334041a63ff8656c3619b601231efea97819f6c67fa053bf8916b63b110863167d51397fbb5e6e595794157dcd827def0901b9eb0df6cab9c4626f912f2c4109c5d2a2dc183e77d5a904cd8e30baad9e159de557abd3bfc9115569db3ef2a0f728717e78e1ec09eebcf954bec67e2e55c0f921894bc189378a8e8dceffa69ad59eb2f52a9d9db9abf37aab7cf65a536850690cfa1b7136d98d5fcd05f2da4ff49a271f71bbe8d521a67b3d9348b6ebfa5d17412e75994fc3d9dfe03504b0304140000080800f80b8f43287e18aa4300000048000000120024006772617068305f656469746f722e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce01ab56cac94fce4e4d51b22a292a4dd5512acec82f77ad28294a54b24a4bcc29068a94a456949416a58665166726e5a4c2d4156496e59728592939a7e695a41629d50200504b0304140000080800f80b8f43e5b907cb7700000085000000090024006d6574612e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce011d8c3d0f83201400ffcb9b2de12b88ae1ddc9aeec601e5a96f2818c4268de97faf74bbe1ee4e7863da2906684131cd381350c192dcb6eed08a0b0ff217f520ebb9315a3bb45c09299b9b7166947e9cecc48db6aa86a182fcd9f0e15ef82f9e2eaf33054f61615d22df956bb142f4788f47c845e3c3f707504b01022d00140000080800f80b8f4309833cda03020000e30300000b00240000000000000000000000000000006772617068302e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce01504b01022d00140000080800f80b8f43287e18aa43000000480000001200240000000000000000000000500200006772617068305f656469746f722e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce01504b01022d00140000080800f80b8f43e5b907cb77000000850000000900240000000000000000000000e70200006d6574612e6a736f6e0a0020000000000001001800ded5197b78f9ce01ded5197b78f9ce01ded5197b78f9ce01504b050600000000030003001c010000a90300000000
+    data_backup: 
+    data_cachedStartup: 
+    revertData: 
+    cacheStartup: 0
+    compress: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 20000
+  showSearchTree: 0
+  unwalkableNodeDebugSize: .300000012
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _NodeConnection: {r: 1, g: 1, b: 1, a: .899999976}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: .5}
+    _BoundsHandles: {r: .289999992, g: .453999996, b: .740999997, a: .899999976}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: .5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: .5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: .5}
+    _MeshColor: {r: .125, g: .68599999, b: 0, a: .189999998}
+    _AreaColors: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 0
+  maxFrameTime: 1
+  minAreaSize: 10
+  limitGraphUpdates: 1
+  maxGraphUpdateFreq: .200000003
+  lastScanTime: .0350020006
+  inGameDebugPath: 
+  isScanning: 0
+  showGraphs: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
