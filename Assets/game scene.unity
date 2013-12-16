@@ -8217,7 +8217,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000000
+    maxNumParticles: 100000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -8235,7 +8235,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 1000
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:

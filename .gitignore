@@ -18,3 +18,4 @@ Library/**
 *.userprefs
 *.user
 /Library
+/builds
