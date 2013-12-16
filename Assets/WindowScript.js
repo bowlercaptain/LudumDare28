@@ -23,8 +23,9 @@ function OnGun () {
 
 //create some shards of glass, play shattering noise
 mainController.window=true;
-
-Destroy(gameObject);
+GetComponent(AudioSource).Play();
+//Destroy(gameObject);
+transform.localScale=Vector3.zero;
 }
 
 function OnWatch () {

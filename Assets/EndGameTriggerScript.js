@@ -14,4 +14,5 @@ function Update () {
 function OnTriggerEnter(other:Collider){
 	mainController.endTriggerNum=triggerNum;
 	mainController.GameOver();
+	GetComponent(AudioSource).Play();
 }
