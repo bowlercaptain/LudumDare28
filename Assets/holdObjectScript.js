@@ -25,7 +25,9 @@ function Update () {
 	if(Input.GetButtonDown("Fire1")){
 		//iF(held==knife){
 		swingTime=.125;
+		if(held==knife||held==gun){
 		held.getAudio.Play();
+		}
 		//}
 		var nowUseDistance:float = useDistance;
 		if (currentMessage=="OnGun"){
