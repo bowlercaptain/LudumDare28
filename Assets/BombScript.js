@@ -5,6 +5,7 @@ var clock:float;
 var disarmed:boolean;
 var cylinders:CylinderScript[];
 var selectedIndex:int;
+var lights:Light[];
 
 //each activatable object (there won't be many) will have an OnKnife, OnRose, OnGun, and OnWatch.
 //Using a tool on an object will SendMessage with one of those functions.
@@ -28,8 +29,15 @@ disarmed=false;
 }
 
 function Update () {
-clock+=Time.deltaTime;
-	if(clock>=60&&!disarmed){
+if(!disarmed){clock+=Time.deltaTime;}
+//var intClock=clock;
+var intClock:int=clock; //original intention
+intClock=64-clock;
+for (light in lights){
+	light.intensity=intClock%2;
+	intClock/=2;
+	}
+	if(clock>=64&&!disarmed){
 		particleSystem.Play();
 		mainController.GameOver();
 	}
