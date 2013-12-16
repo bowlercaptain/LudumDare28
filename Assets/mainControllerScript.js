@@ -53,21 +53,104 @@ function GameOver () {//can be called by, say, the bomb exploding, as well as th
 			deathJuke.Play();
 		}
 	} else if (endTriggerNum==2){//left through door
-		if(girl==1&&buddy==1){
+		switch(girl){
+		case 1:
+			switch(buddy){
+			case 1:
+				if(bomb==1){
+					gameOverString="You disarmed the bomb! Admittedly, there was nobody left to save because you're an insane murderer, but nonetheless: Good job.";
+					winJuke.Play();
+				} else {
+					gameOverString="Game over. You murdered everyone and left. Good job, psychopath.";
+					dramaJuke.Play();
+				}
+			break;
+			case 2:
+				if(bomb==1){
+					gameOverString="You murdered the girl and brought the traitorous foreign agent with you to safety. Why you did that is an utter mystery.";
+					deathJuke.Play();
+				} else {
+					gameOverString="You murdered the girl and brought the traitorous foreign agent with you to safety. Why you did that is an utter mystery. You didn't even disarm the bomb. What is wrong with you?";
+					failJuke.Play();
+				}
+			break;
+			default:
+				if(bomb==1){
+					gameOverString="The girl died by your hands, and the villain died by the bomb you didn't disarm. You are horrible.";
+					failJuke.Play();
+				} else {
+					gameOverString="You murdered your girl and left your traitorous friend alive to come back in the sequel. Way to be Forward-thinking, moron.";
+					failJuke.Play();
+				}
+			}
+		break;
+		case 2:
+			switch(buddy){
+				case 1:
+					if(bomb==1){
+						gameOverString="You won the girl, shot the shady foreign agent who would totally have betrayed you, and rode off into the sunset in your Aston Martin. Congratulations! A winner is you!";
+						winJuke.Play();
+					} else {
+						gameOverString="You won the girl, shot the shady foreign agent who would totally have betrayed you, and rode off into the sunset in your Aston Martin. Congratulations! The bomb still killed everyone in the orphanage nearby, but who'se worried about them?";
+						dramaJuke.Play();
+					}
+				break;
+				case 2:
+					if(bomb==1){
+						gameOverString="who needs violence! You disarm the bomb and hand out flowers like candy. The world is peaceful like you hope. Except for that foreign rival agent. Our detectors sense the presence of a knife somewhere in the vicinity of your back in the near future.";
+						dramaJuke.Play();
+					} else {
+						gameOverString="Who needs to disarm bombs? You're more of a flowers guy. Many, many, flowers.";
+						winJuke.Play();
+					}
+				break;
+				default:
+					if(bomb==1){
+						gameOverString="You get the girl, but your rival survives to fight another day. Will you see through the ruse and survive? Find out next time on Knife, Gun, Rose, Watch: Diamonds Are Her Majesty's Another Day Twice.";
+					} else {
+						gameOverString="You got the girl and let the traitorous rival agent die in the blast. Successful, if unambitious.";
+					}
+			}
+		break;
+		default:
+		switch(buddy){
+			case 1:
+				if(bomb==1){
+					gameOverString="You stopped your rival and defused the bomb. Free of danger, you and your lover part ways.";
+				} else {
+					gameOverString="You kill your rival, but leave your girl to die in the bomb blast. You just wanted to make sure you weren't followed.";
+				}
+			break;
+			case 2:
+				if(bomb==1){
+					gameOverString="You choose to take the rival foreign agent with you rather than the girl. You surely won't regret that decision. Oh hey, where did that knife come from?";
+				} else {
+					gameOverString="You brought the rival foreign agent with you and left the girl to die in the bomb blast. Great going, hero.";
+				}
+			break;
+			default:
+				if(bomb==1){
+					gameOverString="Your job completed, you drive off home. You wonder, briefly, if those other people in the room mattered at all. You would assume not.";
+				} else {
+					gameOverString="You ran away like a coward, leaving everyone to die in the bomb blast. You should be ashamed.";}
+			}
+		}
+/*		if(girl==1&&buddy==1){
 			gameOverString="Game over. You murdered everyone and left. Good job, psychopath.";
 		} else if (girl == 2 && buddy == 1){
 			gameOverString="You won the girl, shot the shady foreign agent who would totally have betrayed you, and rode off into the sunset in your Aston Martin.";
-			dramaJuke.Play();
+			winJuke.Play();
 		} else if (girl == 2 && buddy == 2){
 			gameOverString="Having handed out flowers like candy, you jump in your car and drive off. The Foreign agent later betrays and shoots you.";
-			deathJuke.Play();
-		} else if (girl == 1 && buddy == 1){
-			gameOverString="You murdered the girl and brought the foreign agent with you to safety.";
+			dramaJuke.Play();
+		} else if (girl == 1 && buddy == 2){
+			gameOverString="You murdered the girl and brought the foreign agent with you to safety. Why you did that is an utter mystery.";
 			failJuke.Play();
 		}
 		if(bomb==0){
 			gameOverString+=" Also, the bomb still went off.";
-		}// else {winJuke.Play();
+		}*/
+		
 	} else {//stayed in room
 		if(bomb==2){
 			dramaJuke.Play();
